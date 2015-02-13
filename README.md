@@ -15,16 +15,6 @@ In light of the nature of the Cloud Computing Concepts course a development envi
 
 The message "koding-vm-0 is building now" will be displayed. Be patient as your virtual machine is built and initialised.
 
-When prompted about the GRUB bootloader select the default option by pressing the SPACE key until you see an asterisk (*) appear between the brackets as shown.
- 
-        [*] /dev/xvda (3221 MB; ???)
- 
-Press the ENTER key to continue.
- 
-When prompted about the menu.lst press the ENTER key to accept the default as shown.
- 
-        keep the local version currently installed
-
 Once the virtual machine instance is ready the sceen changes to a four-pane layout:
 
 * virtual machines (vms) pane
@@ -43,6 +33,16 @@ Be sure to press the ENTER key after each command.
 	(VM) unixscripter: ~ $ sudo apt-get upgrade
 
 When prompted to continue press the ENTER key to accept the default response ('Y' - yes).
+
+If prompted about the GRUB bootloader select the default option by pressing the SPACE key until you see an asterisk (*) appear between the brackets as shown.
+ 
+        [*] /dev/xvda (3221 MB; ???)
+ 
+Press the ENTER key to continue.
+ 
+If prompted about the menu.lst press the ENTER key to accept the default as shown.
+ 
+        keep the local version currently installed
 
 Either type or copy-and-paste the following commands one-at-a-time into the Terminal pane. To paste a command right-click with the mouse and select Paste from the context-sensitive menu.
 Be sure to press the ENTER key after each command.
