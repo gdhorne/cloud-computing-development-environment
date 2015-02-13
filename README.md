@@ -47,9 +47,10 @@ If prompted about the menu.lst press the ENTER key to accept the default as show
 Either type or copy-and-paste the following commands one-at-a-time into the Terminal pane. To paste a command right-click with the mouse and select Paste from the context-sensitive menu.
 Be sure to press the ENTER key after each command.
 
-	(VM) unixscripter: ~$ sudo apt-get install build-essential gcc-4.7-locales g++-multilib\
-			 automake1.9 libtool flex bison gdb gcc-4.7-multilib autoconf2.13\
-			 libstdc++6-4.7-dbg libgcc1-dbg autoconf automake g++-4.7 unzip dos2unix   
+	(VM) unixscripter: ~$ sudo apt-get install build-essential gcc-4.7-locales\
+			 g++-multilib automake1.9 libtool flex bison gdb gcc-4.7-multilib\
+			 autoconf2.13 libstdc++6-4.7-dbg libgcc1-dbg autoconf automake g++-4.7\
+			 unzip dos2unix   
 
 When prompted to continue press the ENTER key to accept the default response ('Y' - yes).
 
