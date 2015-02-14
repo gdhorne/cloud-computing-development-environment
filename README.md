@@ -34,7 +34,7 @@ Be sure to press the ENTER key after each command.
 
 When prompted to continue press the ENTER key to accept the default response ('Y' - yes).
 
-If prompted about the GRUB bootloader select the default option by pressing the SPACE key until you see an asterisk (*) appear between the brackets as shown.
+If prompted about the GRUB bootloader select the default option by pressing the SPACE key until you see an asterisk (\*) appear between the brackets as shown.
  
         [*] /dev/xvda (3221 MB; ???)
  
@@ -128,15 +128,23 @@ To add an SSH key for secure authentication configure your virtual machine to al
 	ReUAF9alR8oskSTtXtJwuuKC+ZWwMhskLe+fRIrchESvtODbR5RvQRKUJkmZRgeG
 	-----END RSA PRIVATE KEY-----
 
-**Copy the private key (~/.ssh/id_rsa) to your local computer and save it in a file accessible only to yourself.** Delete the ~/.ssh/id_rsa file from the virtual machine to prevent an attacker from obtaining your private key; this key is required to access the virtual machine via the secure session protocol. The ~/.ssh/id_rsa.pub file is the associated public key and can be given to anyone with whom you wish you communicate securely; do NOT delete it from the virtual machine.
+**Copy the private key (~/.ssh/id_rsa) to your local computer and save it in a file accessible only to yourself.** Delete the ~/.ssh/id\_rsa file from the virtual machine to prevent an attacker from obtaining your private key; this key is required to access the virtual machine via the secure session protocol. The ~/.ssh/id\_rsa.pub file is the associated public key and can be given to anyone with whom you wish you communicate securely; do NOT delete it from the virtual machine.
 
 	(VM) unixscripter: ~ $ rm ~/.ssh/id_rsa
 
-On your local computer set the permissions on the .pem file as indicated.
+On your local computer set the permissions on the .pem file (VM: id\_rsa, PC: unixscripter.pem) as indicated, if using any \*nix system. You can name the .pem file something other then unixscripter.pem on your own local computer.
 
+For \*nix systems:
 	(PC) mouse@ratnest: ~ $ chmod 600 unixscripter.pem
 	(PC) mouse@ratnest: ~ $ ls -l *.pem
 	-rw------- 1 mouse mouse 1767 Feb 10 19:42 /home/mouse/unixscripter.pem
+
+For Apple Mac OS X systems:
+        (PC) mouse@ratnest: ~ $ chmod 600 unixscripter.pem
+        (PC) mouse@ratnest: ~ $ ls -l *.pem
+        -rw------- 1 mouse mouse 1767 Feb 10 19:42 /Users/mouse/unixscripter.pem
+
+For Microsoft Windows systems there is no need to set these permissions and the .pem file can be saved to the default folder or anywhere you chose.
 
 Click koding-vm-0. A circle containing three dots appears to the immediate right. Click on the circle. The DNS name of your virtual machine is the 'Assigned URL'. You will need this name to remotely access the virtual machine via an SSH and/or to copy files to and from this virtual machine. Click on the actual name to open a new web browser tab from which you can copy the full URL (e.g. uukk84b7906a.unixscripter.koding.io). Close the new web browser tab.
 
@@ -146,7 +154,7 @@ Click anywhwere in the web browser tab containing your workspace (https://koding
 
 There are two ways to access to the virtual machine: the Koding login page or a secure shell client. 
 
-To verify remote access via an SSH client, including PuTTY, use the following example to successfully login to your virtual machine.
+To verify remote access via an SSH client, including [PuTTY](http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html), use the following example to successfully login to your virtual machine.
  
         (PC) mouse@ratnest: ~$ ssh -i unixscripter.pem\ 
                                  unixscripter@uukk84b7906a.unixscripter.koding.io
@@ -162,7 +170,7 @@ ine from a computer on which you have nor previously connected to uukk84b7906a.u
  
 You should see the text below displayed in a terminal window.
  
->Welcome to Ubuntu 14.04 LTS (GNU/Linux 3.13.0-29-generic x86_64)
+>Welcome to Ubuntu 14.04 LTS (GNU/Linux 3.13.0-29-generic x86\_64)
 >
 > * Documentation:  https://help.ubuntu.com/
 >
@@ -184,7 +192,7 @@ You should see the text below displayed in a terminal window.
 >Ubuntu comes with ABSOLUTELY NO WARRANTY, to the extent permitted by
 >applicable law.
 >
-> *** System restart required ***
+> \*\*\* System restart required \*\*\*
 >
 >unixscripter@unixscripter:~$
 
