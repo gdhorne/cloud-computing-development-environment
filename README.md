@@ -135,11 +135,13 @@ To add an SSH key for secure authentication configure your virtual machine to al
 On your local computer set the permissions on the .pem file (VM: id\_rsa, PC: unixscripter.pem) as indicated, if using any \*nix system. You can name the .pem file something other then unixscripter.pem on your own local computer.
 
 For \*nix systems:
+
 	(PC) mouse@ratnest: ~ $ chmod 600 unixscripter.pem
 	(PC) mouse@ratnest: ~ $ ls -l *.pem
 	-rw------- 1 mouse mouse 1767 Feb 10 19:42 /home/mouse/unixscripter.pem
 
 For Apple Mac OS X systems:
+
         (PC) mouse@ratnest: ~ $ chmod 600 unixscripter.pem
         (PC) mouse@ratnest: ~ $ ls -l *.pem
         -rw------- 1 mouse mouse 1767 Feb 10 19:42 /Users/mouse/unixscripter.pem
