@@ -47,9 +47,9 @@ If prompted about the menu.lst press the ENTER key to accept the default as show
 Either type or copy-and-paste the following commands one-at-a-time into the Terminal pane. To paste a command right-click with the mouse and select Paste from the context-sensitive menu.
 Be sure to press the ENTER key after each command.
 
-	(VM) unixscripter: ~$ sudo apt-get install build-essential gcc-4.7-locales\
-			 g++-multilib automake1.9 libtool flex bison gdb gcc-4.7-multilib\
-			 autoconf2.13 libstdc++6-4.7-dbg libgcc1-dbg autoconf automake g++-4.7\
+	(VM) unixscripter: ~$ sudo apt-get install build-essential gcc-4.7-locales\ 
+			 g++-multilib automake1.9 libtool flex bison gdb gcc-4.7-multilib\ 
+			 autoconf2.13 libstdc++6-4.7-dbg libgcc1-dbg autoconf automake g++-4.7\ 
 			 unzip dos2unix   
 
 When prompted to continue press the ENTER key to accept the default response ('Y' - yes).
@@ -142,21 +142,26 @@ Click koding-vm-0. A circle containing three dots appears to the immediate right
 
 Click anywhwere in the web browser tab containing your workspace (https://koding.com/IDE/koding-vm-0/my-workspace).
 
+#### Access the Virtual Machine and Workspace
+
+There are two ways to access to the virtual machine: the Koding login page or a secure shell client. 
+
 To verify remote access via an SSH client, including PuTTY, use the following example to successfully login to your virtual machine.
-
-	(PC) mouse@ratnest: ~$ ssh -i unixscripter.pem\
-				 unixscripter@uukk84b7906a.unixscripter.koding.io
-
-When you are presented with the following prompt type 'yes' (no quotation marks) and press the ENTER key. You will only see this message the first time you attempt to access your virtual machine from a computer on which you have nor previously connected to uukk84b7906a.unixscripter.koding.io.
-
-	The authenticity of host 'uukk84b7906a.unixscripter.koding.io (54.186.21.0)' can't be established.
-	ECDSA key fingerprint is 9b:47:a8:c0:1d:89:f9:a5:85:94:21:32:5e:50:f6:cc.
-	Are you sure you want to continue connecting (yes/no)? 
-
-	Enter passphrase for key '/home/mouse/unixscripter.pem':		
-
+ 
+        (PC) mouse@ratnest: ~$ ssh -i unixscripter.pem\ 
+                                 unixscripter@uukk84b7906a.unixscripter.koding.io
+ 
+When you are presented with the following prompt type 'yes' (no quotation marks) and press the ENTER key. You will only see this message the first time you attempt to access your virtual mach
+ine from a computer on which you have nor previously connected to uukk84b7906a.unixscripter.koding.io.
+ 
+        The authenticity of host 'uukk84b7906a.unixscripter.koding.io (54.186.21.0)' can't be established.
+        ECDSA key fingerprint is 9b:47:a8:c0:1d:89:f9:a5:85:94:21:32:5e:50:f6:cc.
+        Are you sure you want to continue connecting (yes/no)?
+ 
+        Enter passphrase for key '/home/mouse/unixscripter.pem':
+ 
 You should see the text below displayed in a terminal window.
-
+ 
 >Welcome to Ubuntu 14.04 LTS (GNU/Linux 3.13.0-29-generic x86_64)
 >
 > * Documentation:  https://help.ubuntu.com/
@@ -174,24 +179,29 @@ You should see the text below displayed in a terminal window.
 >
 >The programs included with the Ubuntu system are free software;
 >the exact distribution terms for each program are described in the
->individual files in /usr/share/doc/*/copyright.
+>individual files in /usr/share/doc/\*/copyright.
 >
 >Ubuntu comes with ABSOLUTELY NO WARRANTY, to the extent permitted by
 >applicable law.
 >
->unixscripter@unixscripter:~$ 
+> *** System restart required ***
+>
+>unixscripter@unixscripter:~$
 
-To logout of the remote session simply type:
+After upgrading the system software the "System restart required" message is displayed when accessing the virtual machine via a secure shell client. To restart the virtual machine:
+ 
+* type the command 'sudo reboot', or
+* position the mouse cursor over the virtual machine name (koding-vm-0) and click on the circle filled with three dots; toggle the On/Off switch
+ 
+To logout of the remote session from your local computer and disconnect from the virtual machine simply type:
+ 
+        (PC) unixscripter: ~ $ logout
 
-	(VM) unixscripter:~$ logout
+Transferring a file from your local computer to the virtual machine in a secure manner is as easy as either of these commands.
 
-#### Access the Virtual Machine and Workspace
+	(VM) unixscripter: ~ $ wget https://d396qusza40orc.cloudfront.net/cloudcomputing/assignments/mp1_assignment.zip -o mp1_assignment.zip
 
-There are two ways to access to the virtual machine: the Koding login page or a secure shell client. 
-
-Transferring a file from your local computer to the virtual machine in a secure manner is as easy as this command.
-
-	(PC) mouse@ratnest:~$ scp -i unixscripter.pem mp1_assignment.zip\
+	(PC) mouse@ratnest:~$ scp -i unixscripter.pem mp1_assignment.zip\ 
 			 unixscripter@uukk84b7906a.unixscripter.koding.io:~/mp1_assignment.zip
 	Enter passphrase for key '/home/mouse/unixscripter.pem': 
 	mp1_assignment.zip                            100%  444KB 443.8KB/s   00:00
