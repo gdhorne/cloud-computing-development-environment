@@ -199,7 +199,9 @@ To logout of the remote session from your local computer and disconnect from the
 
 Transferring a file from your local computer to the virtual machine in a secure manner is as easy as either of these commands.
 
-	(VM) unixscripter: ~ $ wget https://d396qusza40orc.cloudfront.net/cloudcomputing/assignments/mp1_assignment.zip -o mp1_assignment.zip
+	(VM) unixscripter: ~ $ wget\ 
+				https://d396qusza40orc.cloudfront.net/\
+				cloudcomputing/assignments/mp1_assignment.zip -o mp1_assignment.zip
 
 	(PC) mouse@ratnest:~$ scp -i unixscripter.pem mp1_assignment.zip\ 
 			 unixscripter@uukk84b7906a.unixscripter.koding.io:~/mp1_assignment.zip
