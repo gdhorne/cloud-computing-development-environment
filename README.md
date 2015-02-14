@@ -196,7 +196,8 @@ You should see the text below displayed in a terminal window.
 >
 > \*\*\* System restart required \*\*\*
 >
->unixscripter@unixscripter:~$
+
+	(PC) unixscripter: ~ $
 
 After upgrading the system software the "System restart required" message is displayed when accessing the virtual machine via a secure shell client. To restart the virtual machine:
  
