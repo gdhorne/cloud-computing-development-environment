@@ -2,6 +2,10 @@
 
 ## Cloud Computing Concepts
 
+**Mozilla Firefox v36 running on Ubuntu Linux 14.04**
+
+A course participant has reported issues with the Mozilla Firefox web browser running on Ubuntu Linux 14.04; when starting their virtual machine hosted by Koding.com the start-up process seemed to hang and never progress. After contacting Technical Support at Koding it was suggested Mozilla Firefox 36 might have been corrupted during installation or an add-on could be causing the issue. If you experience any issues with Mozilla Firefox, switch to Google Chrome.
+
 ### Development Environment Setup and Configuration
 
 In light of the nature of the Cloud Computing Concepts course a development environment provided as a platform-as-a-service (PaaS) by [Koding](https://koding.com) on their free-tier is recommended for those course participants preferring not to install development tools on their primary computer. 
